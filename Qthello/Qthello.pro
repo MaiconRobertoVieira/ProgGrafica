@@ -1,5 +1,6 @@
 SOURCES += \
-    main.cpp
+    main.cpp \
+    notepad.cpp
 
 HEADERS += \
     notepad.h

@@ -8,7 +8,6 @@
 
 int main(int argc, char **argv){
 
-
     QApplication app(argc, argv);
 
     notepad Not(&app);//constroi
