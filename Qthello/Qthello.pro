@@ -3,4 +3,5 @@ SOURCES += \
     notepad.cpp
 
 HEADERS += \
-    notepad.h
+    notepad.h \
+    welcome_window.h
