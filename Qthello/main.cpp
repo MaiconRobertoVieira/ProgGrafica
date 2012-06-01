@@ -21,6 +21,7 @@ int main(int argc, char **argv){
     wwin.show();
 
     QObject::connect(&wwin,SIGNAL(clicked()),&Not, SLOT(exibirTexto()));
+    QObject::connect(&wwin,SIGNAL(clicked()),&Not, SLOT(incremContador()));
 
     return app.exec();
 

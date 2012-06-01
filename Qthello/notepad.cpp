@@ -5,6 +5,7 @@ QPushButton *button2;
 QPushButton *button3;
 QPushButton *button4;
 QPushButton *button5;
+QLCDNumber  *lcd;
 
 notepad::notepad(QApplication *app)
 {
@@ -15,8 +16,9 @@ notepad::notepad(QApplication *app)
     button3 = new QPushButton("Botao3");
     button4 = new QPushButton("Botao4");
     button5 = new QPushButton("Botao5");
+    lcd = new QLCDNumber();
 
-
+    cont = 0;
 
     textEdit = new QTextEdit();
     QObject::connect(button1,SIGNAL(clicked()),app, SLOT(quit()));
@@ -24,6 +26,7 @@ notepad::notepad(QApplication *app)
     QObject::connect(button3,SIGNAL(clicked()),app, SLOT(quit()));
     QObject::connect(button4,SIGNAL(clicked()),app, SLOT(quit()));
     QObject::connect(button5,SIGNAL(clicked()),app, SLOT(quit()));
+
 
 
     //QHBoxLayout *layout = new QHBoxLayout;
@@ -38,6 +41,7 @@ notepad::notepad(QApplication *app)
 
     layout->addWidget(button4,4,2,Qt::AlignLeft);
     layout->addWidget(button5,4,2,Qt::AlignRight);
+    layout->addWidget(lcd,5,2,Qt::AlignCenter);
 
 
     window = new QWidget;
@@ -61,5 +65,10 @@ void notepad::setarTexto(QString string)
 void notepad::exibirTexto(){
 
     textEdit->setText(text);
-
+    lcd->display(cont);
+   }
+void notepad::incremContador(){
+    cont++;
 }
+//VEr Qtimer e Qfile
+

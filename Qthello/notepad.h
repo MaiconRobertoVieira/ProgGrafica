@@ -18,15 +18,18 @@ private:
   //  QApplication *appInt;
     QTextEdit *textEdit;
     QString text;
-
+    QLCDNumber * lcd;
+    int cont;
 
 
 public:
     notepad(QApplication *app);
     void show();
     void setarTexto(QString string);
+
 public slots:
  //   void changeText(); // qedit = como setar + comeca com set
     void exibirTexto();
+    void incremContador();
 };
 
