@@ -14,8 +14,11 @@ public:
 private:
     float rtri;
     float rquad;
-    float movD;
-    float movE;
+    float movT_ED;
+    float movT_BC;
+
+    float movQ_ED;
+    float movQ_BC;
 
   //virtual ~QWidget();
 };
