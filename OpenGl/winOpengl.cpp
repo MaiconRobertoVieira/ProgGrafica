@@ -76,9 +76,6 @@ void winopengl::paintGL(){
     glVertex3f(-1.0f,-1.0f, 1.0f);
     glEnd();
 
-
-
-
    glLoadIdentity();
     glColor3f(0.0f, 0.0f, 1.0f);
 
