@@ -2,8 +2,9 @@
 #include <GL/glu.h>
 
 winopengl::winopengl(){
-}
+   timer.start(timeoutTime(),this);
 
+}
 
 void winopengl::initializeGL(){
 
@@ -169,11 +170,18 @@ void winopengl::keyPressEvent(QKeyEvent *event){
         case Qt::Key_I:
             movQ_BC += 1.0f;
             break;
-
         }
         updateGL();
 
     }
 
+void winopengl::timerEvent(QTimerEvent *event){
 
+    rtri -= 0.5f;
+    updateGL();
+    rquad += 0.5f;
+    updateGL();
+}
+
+//30 quadros por segundo 33.33 = resposta
 
